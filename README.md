@@ -5,7 +5,7 @@ TaxClarity is an IMPACTX 2026 hackathon prototype designed to make common tax wo
 Project status: Hackathon prototype. Use synthetic/demo data only. TaxClarity is not a substitute for official tax guidance or advice from a qualified tax professional.
 
 Project Links
-- Live website (Round 2): https://finalround2.netlify.app/
+- Live website (Round 2): https://taxclarity123.netlify.app
 - Demo video: Watch the TaxClarity demo
 - GitHub repository: https://github.com/akshayahasinidesetty/taxclarity
 Contents

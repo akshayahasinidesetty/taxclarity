@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #F4F7FB; --card: #FFFFFF; --text: #0A1224; --muted: #64748B; --border: #E2E8F0; }
+.dark { --bg: #0A1224; --card: #111F38; --text: #F8FAFC; --muted: #94A3B8; --border: #1E293B; }
+
+* { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+body { background: var(--bg); color: var(--text); }
+*:focus-visible { outline: 2px solid #14B8A6; outline-offset: 2px; border-radius: 4px; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+.shimmer { background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 37%, #f1f5f9 63%); background-size: 400% 100%; animation: shimmer 1.4s ease infinite; }
+@keyframes shimmer { 0% { background-position: 100% 0 } 100% { background-position: -100% 0 } }
+
+/* Hide scrollbar for clean */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* IMPACTX landing page and theme-aware shared surfaces */
+html { color-scheme: light; }
+html.dark { color-scheme: dark; }
+body { transition: background-color .2s ease, color .2s ease; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+.dark body { background: var(--bg); color: var(--text); }
+.dark header, .dark footer { background: rgba(10,18,36,.9) !important; border-color: var(--border) !important; color: var(--text); }
+.dark .card { background: var(--card); border-color: var(--border); }
+.dark .text-slate-900, .dark .text-slate-800, .dark .text-slate-700, .dark .text-slate-600, .dark .text-slate-500, .dark .text-slate-400 { color: var(--muted) !important; }
+.dark .bg-white { background-color: var(--card) !important; }
+.dark .border-slate-200, .dark .border-slate-300 { border-color: var(--border) !important; }
+.dark .landing-shell { background: #080f1f; }
+.landing-shell { min-height: calc(100vh - 64px); background: #f6f8fc; }
+.landing-shell section:first-child { background: radial-gradient(ellipse at 76% 10%, rgba(20,184,166,.12), transparent 42%), linear-gradient(135deg,#f8fafc 0%,#eef4ff 100%); }
+.dark .landing-shell section:first-child { background: radial-gradient(ellipse at 76% 10%, rgba(20,184,166,.14), transparent 42%), linear-gradient(135deg,#080f1f 0%,#101d35 100%); }
+.landing-glow { position:absolute; border-radius:9999px; filter:blur(70px); pointer-events:none; }
+.landing-glow-one { width:260px;height:260px;right:3%;top:8%;background:rgba(20,184,166,.13); }
+.landing-glow-two { width:220px;height:220px;left:32%;bottom:0;background:rgba(99,102,241,.09); }
+.landing-pill { color:var(--text); border-color:var(--border); background:rgba(255,255,255,.68); }
+.dark .landing-pill { background:rgba(17,31,56,.75); }
+.landing-accent { color:#0f9f91; }
+.dark .landing-accent { color:#5eead4; }
+.landing-period { color:#64748b; }
+.landing-subtitle { color:var(--text); }
+.landing-muted { color:var(--muted); }
+.landing-primary { color:#041b1b; background:#5eead4; box-shadow:0 10px 30px rgba(20,184,166,.16); }
+.landing-primary:hover { background:#99f6e4; }
+.landing-secondary { color:var(--text); border:1px solid var(--border); background:var(--card); }
+.landing-secondary:hover { border-color:#14b8a6; }
+.landing-preview { background:linear-gradient(145deg,#111f38,#0b1428); border:1px solid rgba(148,163,184,.24); color:#f8fafc; box-shadow:0 28px 90px rgba(15,23,42,.18); }
+.landing-mini { background:rgba(255,255,255,.055); border:1px solid rgba(148,163,184,.17); }
+.landing-tag { color:#99f6e4; background:rgba(20,184,166,.13); }
+.landing-track { background:rgba(148,163,184,.2); }
+.landing-warning { color:#fcd34d; background:rgba(245,158,11,.12); }
+.landing-icon { color:#99f6e4; background:rgba(20,184,166,.14); }
+.landing-divider { height:1px; background:var(--border); }
+.landing-feature { background:var(--card); border:1px solid var(--border); }
+.landing-bottom { background:var(--card); border:1px solid var(--border); }
+
+/* TaxClarity Assistant surfaces remain readable in the required dark theme. */
+.dark .assistant-chat-log { background: #0b1428 !important; border-color: var(--border) !important; }
+.dark .assistant-message { background: #14213a !important; border-color: #334155 !important; color: #e2e8f0 !important; }
+.dark .assistant-input { background: #0b1428 !important; color: #f8fafc !important; border-color: #334155 !important; }
+.dark .assistant-suggestion { background: #14213a !important; border-color: #334155 !important; color: #e2e8f0 !important; }
+.dark .assistant-suggestion:hover { background: #1e293b !important; }

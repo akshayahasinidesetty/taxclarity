@@ -1,98 +1,119 @@
-# TaxClarity — Making Tax Services Understandable
+TaxClarity
+Clearer records. Smarter tax decisions. Greater confidence.
 
-> A taxpayer-friendly prototype designed to make tax-related information easier to organize, compare, and understand.
+TaxClarity is an IMPACTX 2026 hackathon prototype designed to make common tax workflows easier to understand. It brings together income reconciliation, document review, explainable discrepancy flags, deadline awareness, and guided tax support in one web experience.
+Project status: Hackathon prototype. Use synthetic/demo data only. TaxClarity is not a substitute for official tax guidance or advice from a qualified tax professional.
 
-##  Project Links
+Project Links
+- Live website (Round 2): https://finalround2.netlify.app/
+- Demo video: Watch the TaxClarity demo
+- GitHub repository: https://github.com/akshayahasinidesetty/taxclarity
+Contents
+- The Problem
+- Our Solution
+- Key Features
+- Technology Stack
+- Run Locally
+- Available Commands
+- Deploy to Netlify
+- Example Workflow
+- Privacy and Responsible Use
+- Limitations and Future Improvements
+- Team
+- License
+ The Problem
+Tax-related information can be spread across multiple documents and sources. Comparing income figures, tracking document updates, recognizing discrepancies, and remembering deadlines can become confusing and time-consuming.
+ Our Solution
+TaxClarity provides a single, review-friendly interface for common tax workflow tasks. It aims to help users notice differences, understand what deserves attention, and identify sensible next steps—without treating an automated flag as a final tax decision.
+ Key Features
+- Tax calculator: Explore estimates using the inputs and calculation rules available in the prototype.
+- Income reconciliation: Compare figures from different sources and highlight differences that may need review.
+- Document review: Organize the document-review workflow and surface document-related status or version cues supported by the prototype.
+- Explainable discrepancy flags: Make possible mismatches easier to notice and investigate.
+- Deadline awareness: Keep relevant tax deadlines visible in the workflow.
+- Guided tax support: Provide in-product guidance to help users navigate the available features.
+- Responsive interface: Access the web experience across common screen sizes.
+Feature availability depends on the current deployed prototype. Refer to the live site for the latest working experience.
+Technology Stack
+The implementation materials reviewed for this project indicate the following technologies:
+- Frontend framework: Next.js
+- UI library: React
+- Language: TypeScript
+- Styling: Tailwind CSS / custom CSS, depending on the current build
+- Hosting: Netlify
+- Version control: Git and GitHub
+The exact dependency versions and scripts should be confirmed from the repository's package.json and configuration files. Do not describe the assistant as connected to a live AI model, or claim a production database or authentication system, unless those integrations are present and tested in the current source code.
+Run Locally
+Prerequisites
+Install the following before starting:
+- Node.js (prefer an active LTS release)
+- npm, which is included with Node.js
+- Git to clone the repository
+Check that Node.js and npm are installed:
+node --version
+npm --version
+1. Clone the repository
+git clone https://github.com/akshayahasinidesetty/taxclarity.git
+cd taxclarity
+2. Check that the application source is present
+The project root should contain package.json and the application source/configuration files. The public repository listing may not yet include all application files; if package.json is missing, upload/push the complete app source before continuing.
+3. Install dependencies
+npm install
+4. Start the development server
+npm run dev
+Open http://localhost:3000 in your browser. If the terminal prints a different local URL, use that URL instead.
+5. Create a production build
+npm run build
+To test the production build locally, if the project defines the standard Next.js start script:
+npm run start
+If a command is unavailable, check the "scripts" section of package.json and use the commands defined by the project. No environment-variable requirements have been independently verified here; if the source includes an .env.example, follow it. Never commit API keys, tokens, passwords, or other secrets.
+ Available Commands
+Typical commands for a Next.js project are shown below. The actual commands depend on the scripts defined in package.json.
+Command	Purpose
+npm install	Installs project dependencies
+npm run dev	Starts the development server
+npm run build	Builds the app for production
+npm run start	Starts the production server, if configured
+npm run lint	Runs linting, if configured
 
-- **Live Website:** https://tax-clarity.netlify.app/
-- **Demo Presentation:** https://new.express.adobe.com/publishedV2/urn:aaid:sc:AP:3d32d6f9-089e-5242-a2f0-9f007a005050?promoid=Y69SGM5H&sdid=C4SZ2FYJ&mv=other
-- **GitHub Repository:** https://github.com/akshayahasinidesetty/taxclarity
 
-##  Overview
+Deploy to Netlify
+The live Round 2 site is hosted at finalround2.netlify.app.
 
-TaxClarity is a web-based prototype developed for IMPACTX 2026. It aims to simplify the process of reviewing tax-related records by presenting information through a clear, guided, and user-friendly interface.
-
-Tax-related information can be difficult to organize and compare across different records. TaxClarity demonstrates how a guided digital workspace can help users identify differences, understand what needs verification, and organize their next steps.
-
-##  Problem Statement
-
-Individuals may find it challenging to review tax-related documents, compare reported amounts, keep track of required documents, and understand differences between financial records.
-
-Traditional workflows can involve manually reviewing multiple documents and identifying which details require further attention.
-
-##  Our Solution
-
-TaxClarity provides a centralized prototype experience for exploring tax-related information. It combines a guided dashboard, document checklist, record comparison example, and predefined helper guidance in one interface.
-
-The project focuses on improving clarity and organization rather than replacing professional tax advice or official tax-filing services.
-
-##  Key Features
-
-- **User-Friendly Landing Page:** Introduces the platform and provides access to the demo workspace.
-- **Demo Login Interface:** Lets users explore the prototype workspace.
-- **Dashboard:** Brings the main features and workflow overview together.
-- **Document Checklist:** Helps users organize the documents they may need to review.
-- **Income Comparison:** Demonstrates how two financial records can be compared to highlight a difference.
-- **Discrepancy Awareness:** Encourages users to investigate differences instead of assuming that every mismatch is an error.
-- **TaxClarity Helper:** Provides predefined guidance within the prototype.
-- **Sample Document Selection:** Demonstrates selecting a file through the document picker.
-- **Light and Dark Modes:** Offers alternative interface themes.
-- **Project Information:** Introduces the project and provides access to its repository.
-
-##  Example: Income Comparison
-
-The website demonstrates a fictional comparison between two records:
-
-| Record | Amount |
-|---|---:|
-| Record A | ₹8,40,000 |
-| Record B | ₹8,25,000 |
-| Difference | ₹15,000 |
-
-The difference is a prompt for further verification, not proof of an error or a tax liability. Users should review the source documents, reporting periods, and supporting evidence before deciding on the next step.
-
-##  Technology
-
-TaxClarity is a web-based prototype. Please refer to the source files in this repository for the exact frameworks, libraries, and tools used in the implementation.
-
-##  How to Explore the Demo
-
-1. Open the live website.
-2. Explore the landing page and demo login interface.
-3. Navigate through the dashboard and document checklist.
-4. Review the fictional income comparison example.
-5. Explore the TaxClarity Helper and sample document-selection interface.
-6. Try the light and dark modes.
-7. View the project demonstration using the Adobe Express link above.
-
-##  Project Goals
-
-- Make tax-related information easier to understand.
-- Demonstrate a more organized document-review workflow.
-- Help users notice differences that may require verification.
-- Present complex information through a simple, accessible interface.
-- Encourage informed review before taking further action.
-
-##  Team
-
-**Team Members**
+To deploy a source-code version using Netlify:
+1. Push the complete application source to GitHub, including package.json and the required app/config files.
+2. In Netlify, choose Add new site → Import an existing project and connect the GitHub repository.
+3. Configure the build command to match the project scripts (commonly npm run build for Next.js).
+4. Use Netlify's detected Next.js configuration where available. Set the Node.js version to a version supported by the project's Next.js version.
+5. Add any required environment variables in Netlify's site settings—only if the code actually needs them. Keep secrets out of Git.
+6. Deploy and check the deploy log. Open the deployed URL and test the calculator, reconciliation, document flow, navigation, and other visible features.
+Deployment tip: Do not use a static drag-and-drop deployment for a Next.js application that needs its framework runtime. Connect the source repository and configure the build using the actual project files.
+Example Workflow
+1. Open the live TaxClarity website.
+2. Navigate through the available dashboard or feature sections.
+3. Enter synthetic/sample values into the calculator, where supported.
+4. Compare two sample income amounts using the reconciliation feature.
+5. Review any flagged difference and determine what original records would need checking.
+6. Explore document review, deadline information, and guided support as available in the deployed prototype.
+For example, if two illustrative sources show ₹8,40,000 and ₹8,25,000, the difference is ₹15,000. That difference is a reason to investigate; it does not establish which figure is correct.
+Privacy and Responsible Use
+- Use fictional or synthetic information for demonstrations and testing.
+- Do not upload real tax records, identity documents, bank details, or other sensitive personal information to this hackathon prototype.
+- Treat calculations and discrepancy flags as informational aids that require independent verification.
+- Verify tax rules and deadlines against current official sources or a qualified professional.
+- Production-grade authentication, secure document storage, persistence, and live AI integrations should not be assumed unless implemented and tested in the current version.
+ Limitations and Future Improvements
+Potential next steps include:
+- Validate the tax calculation and reconciliation logic against well-defined test cases.
+- Improve document history and traceability.
+- Make guidance more transparent and connect it to verified official references.
+- Add appropriate access controls and secure storage before handling real user data.
+- Test accessibility, responsive behavior, and error states.
+- Evaluate whether the workflow reduces the time needed to identify and review discrepancies.
+Team
+Team CodePulse — IMPACTX 2026
 - Akshaya Hasini Desetty
 - Snehitha Marella
-
-**Event:** IMPACTX 2026
-
-##  Disclaimer
-
-TaxClarity is an educational prototype developed to demonstrate a potential approach to organizing and reviewing tax-related information.
-
-It is not an official government portal and does not claim direct integration with government tax systems. The displayed examples are illustrative and should not be treated as actual financial records, tax advice, or confirmation of tax compliance. Users should verify information with official sources or a qualified tax professional.
-
-##  Links
-
-- [Open TaxClarity](https://tax-clarity.netlify.app/)
-- [View the Adobe Express Demo](https://new.express.adobe.com/publishedV2/urn:aaid:sc:AP:3d32d6f9-089e-5242-a2f0-9f007a005050?promoid=Y69SGM5H&sdid=C4SZ2FYJ&mv=other)
-- [Explore the GitHub Repository](https://github.com/akshayahasinidesetty/taxclarity)
-
----
-
-**TaxClarity — Clearer records. Better understanding. More confident next steps.**
+📄 License
+This project includes an MIT license in the repository. See LICENSE for the license text and terms.
+TaxClarity — Clearer records. Smarter tax decisions. Greater confidence.
